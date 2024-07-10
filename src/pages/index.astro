@@ -1,0 +1,113 @@
+---
+import { Image } from "astro:assets";
+import top from "@/assets/1500x500.jpg";
+import userIcon from "@/assets/iconx16.png";
+import wave from "@/assets/wave.svg";
+import { getArticles } from "@/libs/article";
+import Card from "../components/Card.astro";
+import WorkCard from "../components/WorkCard.astro";
+import Layout from "../layouts/Layout.astro";
+
+const articles = await getArticles();
+---
+
+<Layout>
+  <header></header>
+
+  <!-- Top -->
+  <div class="relative w-full transition">
+    <Image
+      src={top}
+      alt=""
+      class="transition-all w-full object-cover h-[40dvh]"
+    />
+    <div class="absolute left-16 bottom-16 m-auto h-[30px]">
+      <h1 class="text-5xl text-center"></h1>
+    </div>
+    <div class="absolute bottom-0 left-0 w-full text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="276 282 1440 108">
+        <path
+          fill="currentColor"
+          d=" M 276 346 L 324 340.7 C 372 335 468 325 564 324.7 C 660 325 756 335 852 346 C 948 357 1044 367 1140 372.7 C 1236 378 1332 378 1428 362 C 1524 346 1620 314 1668 298 L 1716 282 L 1716 390 L 1668 390 C 1620 390 1524 390 1428 390 C 1332 390 1236 390 1140 390 C 1044 390 948 390 852 390 C 756 390 660 390 564 390 C 468 390 372 390 324 390 L 276 390 L 276 346 Z "
+        >
+        </path>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Top -->
+  <div class="max-w-[1024px] mt-20 mx-auto px-12">
+    <h2 class="text-5xl mt-10 mb-4 font-[Montserrat] font-bold">PROFILE</h2>
+    <div class="flex gap-4 mx-auto">
+      <div class="relative flex justify-center">
+        <Image src={userIcon} alt="" class="w-64 object-contain rounded-full" />
+        <div class="absolute bottom-[-24px]">
+          <p class="text-4xl font-bold">あんこ</p>
+        </div>
+      </div>
+      <div>TODO</div>
+    </div>
+    <div class="ml-4">
+      <p class="text-sm mt-4 text-slate-500">所属 Belonging</p>
+      <div class="ml-4">
+        <p>東京工業大学 物理学系</p>
+        <p>traP CTF 班</p>
+        <p>株式会社ナンバーナイン (インターン)</p>
+        <p>Sony CSL (アルバイト)</p>
+        <p>株式会社 Ricerca Security (業務委託)</p>
+      </div>
+      <p class="text-sm mt-4 text-slate-500">言語 Languages</p>
+      <div class="ml-4">
+        <p>React Next.js Rust</p>
+      </div>
+      <p class="text-sm mt-4 text-slate-500">趣味</p>
+      <div class="ml-4">
+        <p>ゲームと理論と高速化が好きです。</p>
+      </div>
+      <p class="text-sm mt-4 text-slate-500">やってみたいこと</p>
+      <div class="ml-4">
+        <p></p>
+      </div>
+    </div>
+
+    <h2 class="text-4xl mt-10 mb-4 font-[Montserrat] font-bold">WORKS</h2>
+    <ul
+      role="list"
+      class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] auto-rows-[200px] gap-8 p-0"
+    >
+      TODO
+    </ul>
+
+    <h2 class="text-4xl mt-10 mb-4 font-[Montserrat] font-bold">ACTIVITIES</h2>
+    <div class="ml-4">
+      <p>SECCON CTF 2023 Domestic 6th</p>
+      <p>SECCON CTF 2022 Domestic 7th</p>
+      <p>セキュキャン</p>
+    </div>
+
+    <h2 class="text-4xl mt-10 mb-4 font-[Montserrat] font-bold"></h2>
+    <div>
+      <p>株式会社ナンバーナイン</p>
+      <p>Sony CSL</p>
+    </div>
+
+    <h2 class="text-4xl mt-10 mb-4 font-[Montserrat] font-bold">ARTICLES</h2>
+    <ul
+      role="list"
+      class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-8 p-0"
+    >
+      {
+        articles.map((article) => (
+          <a href={article.url} target="_blank" rel="noopener noreferrer">
+            <WorkCard
+              title={article.title}
+              source={article.source}
+              postedAt={article.postedAt}
+              image={article.ogImageUrl}
+            />
+          </a>
+        ))
+      }
+    </ul>
+  </div>
+</Layout>
