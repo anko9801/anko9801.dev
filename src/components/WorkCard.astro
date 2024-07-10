@@ -1,0 +1,58 @@
+---
+interface Props {
+  source: "qiita.com" | "zenn.dev" | "trap.jp" | "note.com" | "sizu.me";
+  title: string;
+  postedAt?: Date;
+  image: string | undefined;
+}
+
+const { title, source, postedAt, image } = Astro.props;
+const year = postedAt?.getFullYear();
+const month = postedAt?.getMonth();
+const date = postedAt?.getDate();
+---
+
+<script>
+  const waveContainers =
+    document.querySelectorAll<HTMLElement>(".wave-container");
+
+  waveContainers.forEach((waveContainer) => {
+    const wrapper = waveContainer.querySelector("span");
+    if (!wrapper) return;
+    const wave = waveContainer.querySelector<HTMLElement>("span span");
+
+    waveContainer.addEventListener("mouseenter", (e) => {
+      wrapper.style.visibility = "visible";
+      wrapper.style.transform = `translate(${e.offsetX}px, ${e.offsetY}px)`;
+      wave?.classList.add("animate-slide-in-bottom");
+    });
+
+    waveContainer.addEventListener("mouseleave", () => {
+      wrapper.style.visibility = "hidden";
+      wave?.classList.remove("animate-slide-in-bottom");
+    });
+  });
+</script>
+
+<div
+  class="group relative h-full cursor-pointer overflow-hidden rounded bg-ui-background shadow transition hover:shadow-lg"
+>
+  <div class="wave-container">
+    <img
+      class="w-full aspect-[40/21] object-cover transition transition-transform-100 group-hover:scale-110"
+      src={image}
+      alt={title}
+    />
+    <span class="absolute inset-0 invisible">
+      <span class="absolute inset-0 w-[500px] h-[500px] bg-white rounded-full"
+      ></span>
+    </span>
+  </div>
+
+  <div class="w-full py-2 px-4">
+    <h3>{title}</h3>
+    <p>
+      {year}-{month}-{date}
+    </p>
+  </div>
+</div>
