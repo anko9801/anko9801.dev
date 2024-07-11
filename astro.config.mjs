@@ -6,6 +6,4 @@ export default defineConfig({
   integrations: [tailwind()],
   base: '/anko9801.dev',
   trailingSlash: 'never',
-  srcDir: './src',
-  publicDir: './dist',
 })
