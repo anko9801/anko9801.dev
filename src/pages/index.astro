@@ -12,71 +12,71 @@ const articles = await getArticles();
 <Layout>
   <header></header>
 
-  <!-- Top -->
-  <div class="relative w-full transition">
-    <Image
-      src={top}
-      alt=""
-      class="transition-all w-full object-cover h-[25dvh]"
-    />
-    <div class="absolute left-16 bottom-16 m-auto h-[30px]">
-      <h1 class="text-5xl text-center"></h1>
-    </div>
-    <div class="absolute bottom-0 left-0 w-full text-white">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="276 282 1440 108">
-        <path
-          fill="currentColor"
-          d=" M 276 346 L 324 340.7 C 372 335 468 325 564 324.7 C 660 325 756 335 852 346 C 948 357 1044 367 1140 372.7 C 1236 378 1332 378 1428 362 C 1524 346 1620 314 1668 298 L 1716 282 L 1716 390 L 1668 390 C 1620 390 1524 390 1428 390 C 1332 390 1236 390 1140 390 C 1044 390 948 390 852 390 C 756 390 660 390 564 390 C 468 390 372 390 324 390 L 276 390 L 276 346 Z "
-        >
-        </path>
-      </svg>
-    </div>
-  </div>
+  <div class=""></div>
 
-  <!-- PROFILE -->
-  <div class="max-w-[1024px] mt-20 mx-auto px-12">
-    <h2 class="text-5xl mt-8 mb-8 pb-4 border-b font-[Montserrat] font-bold">
-      だ～れだ
-    </h2>
-    <div class="my-8 flex gap-4 justify-center">
-      <div class="relative flex justify-center">
-        <Image
-          src={userIcon}
-          alt=""
-          class="w-64 object-contain rounded-full"
-          decoding="async"
-        />
-        <div class="absolute bottom-[-24px]">
-          <p class="text-4xl font-bold">あんこ</p>
+  <main class="bg-[linear-gradient(to_bottom,_#d5ebfb_0%,_#86c6e0_100%)]">
+    <!-- Top -->
+    <div class="relative w-full transition">
+      <Image
+        src={top}
+        alt=""
+        class="transition-all w-full object-cover h-[25dvh]"
+      />
+      <div class="absolute left-16 bottom-16 m-auto h-[30px]">
+        <h1 class="text-5xl text-center"></h1>
+      </div>
+      <div class="absolute bottom-0 left-0 w-full text-[#d5ebfb]">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="276 282 1440 108">
+          <path
+            fill="currentColor"
+            d=" M 276 346 L 324 340.7 C 372 335 468 325 564 324.7 C 660 325 756 335 852 346 C 948 357 1044 367 1140 372.7 C 1236 378 1332 378 1428 362 C 1524 346 1620 314 1668 298 L 1716 282 L 1716 390 L 1668 390 C 1620 390 1524 390 1428 390 C 1332 390 1236 390 1140 390 C 1044 390 948 390 852 390 C 756 390 660 390 564 390 C 468 390 372 390 324 390 L 276 390 L 276 346 Z "
+          >
+          </path>
+        </svg>
+      </div>
+    </div>
+
+    <!-- PROFILE -->
+    <div class="max-w-[1024px] mt-20 mx-auto px-12">
+      <h2 class="text-5xl mt-8 mb-8 pb-4 border-b font-[Montserrat] font-bold">
+        About
+      </h2>
+      <div class="my-8 flex gap-4 justify-center">
+        <div class="relative flex justify-center">
+          <Image
+            src={userIcon}
+            alt=""
+            class="w-64 object-contain rounded-full"
+            decoding="async"
+          />
+          <div class="absolute bottom-[-24px]">
+            <p class="text-4xl font-bold">あんこ</p>
+          </div>
         </div>
       </div>
-      <div>
-        <p>あんこでした～</p>
-      </div>
-    </div>
-    <div class="ml-4">
-      <p class="text-sm mt-4 text-slate-500">所属</p>
       <div class="ml-4">
-        <p>東京工業大学 物理学系</p>
-        <p>traP CTF 班</p>
-        <p>株式会社ナンバーナイン (インターン)</p>
-        <p>Sony CSL (アルバイト)</p>
-      </div>
-      <p class="text-sm mt-4 text-slate-500">言語とか</p>
-      <div class="ml-4">
-        <p>Next.js React Rust</p>
-      </div>
-      <p class="text-sm mt-4 text-slate-500">趣味</p>
-      <div class="ml-4">
-        <p>ゲームと理論と高速化が好きです。</p>
-      </div>
-      <!-- <p class="text-sm mt-4 text-slate-500">やってみたいこと</p>
+        <p class="text-sm mt-4 text-slate-500">所属</p>
+        <div class="ml-4">
+          <p>東京工業大学 物理学系</p>
+          <p>traP CTF 班</p>
+          <p>株式会社ナンバーナイン (インターン)</p>
+          <p>Sony CSL (アルバイト)</p>
+        </div>
+        <p class="text-sm mt-4 text-slate-500">言語とか</p>
+        <div class="ml-4">
+          <p>Next.js React Rust</p>
+        </div>
+        <p class="text-sm mt-4 text-slate-500">趣味</p>
+        <div class="ml-4">
+          <p>ゲームと理論と高速化が好きです。</p>
+        </div>
+        <!-- <p class="text-sm mt-4 text-slate-500">やってみたいこと</p>
       <div class="ml-4">
         <p></p>
       </div> -->
-    </div>
+      </div>
 
-    <!-- <h2 class="text-4xl mt-10 mb-4 font-[Montserrat] font-bold">WORKS</h2>
+      <!-- <h2 class="text-4xl mt-10 mb-4 font-[Montserrat] font-bold">WORKS</h2>
     <ul
       role="list"
       class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] auto-rows-[200px] gap-8 p-0"
@@ -84,128 +84,131 @@ const articles = await getArticles();
       TODO
     </ul> -->
 
-    <h2 class="text-4xl mt-32 mb-8 pb-4 border-b font-[Montserrat] font-bold">
-      成り立ちログ
-    </h2>
-    <div class="ml-4 grid grid-cols-[150px_1fr] gap-4">
-      <p class="text-right">2024/7</p>
-      <p>
-        <a
-          href="https://trap.jp/post/2249/"
-          class="text-blue-500 hover:underline decoration-dashed"
-        >
-          技術書展16 traP TechBook 執筆
-        </a>
-      </p>
-
-      <p class="text-right">2024/2 ~</p>
-      <div>
-        <p>株式会社ナンバーナイン (インターン)</p>
-        <p>フロントエンドエンジニアをしています。</p>
-      </div>
-
-      <p class="text-right">2024/2 ~ 2024/3</p>
-      <div>
-        <p>株式会社 Ricerca Security (業務委託)</p>
-        <p>リサーチャーをしていました。</p>
-      </div>
-
-      <p class="text-right">2023/10</p>
-      <p>SECCON CTF 2023 Domestic 6th</p>
-
-      <p class="text-right">2023/8</p>
-      <p>セキュリティ・キャンプ全国大会 暗号フルスタック開発ゼミ チューター</p>
-
-      <p class="text-right">2023/8</p>
-      <p>ISUCON 13 freee 賞</p>
-
-      <p class="text-right">2023/2</p>
-      <p>みやぎハッカソン</p>
-
-      <p class="text-right">2022/10</p>
-      <p>
-        <a
-          href="https://trap.jp/post/1769/"
-          class="text-blue-500 hover:underline decoration-dashed"
-          target="_blank"
-          rel="noopener noreferrer">SECCON CTF 2022 Domestic 7th</a
-        >
-      </p>
-
-      <p class="text-right">2022/9</p>
-      <p>
-        <a
-          href="https://trap.jp/post/1676/"
-          class="text-blue-500 hover:underline decoration-dashed"
-        >
-          技術書展13 traP SysAd TechBook 4 執筆
-        </a>
-      </p>
-
-      <p class="text-right">2022/8</p>
-      <div>
-        <p>セキュリティ・キャンプ全国大会 脅威解析クラス</p>
-      </div>
-
-      <p class="text-right">2022/8</p>
-      <div>
-        <p>株式会社 FFRI セキュリティ (インターン)</p>
-        <p>短期インターンに参加させていただきました。</p>
-      </div>
-
-      <p class="text-right">2022/3</p>
-      <p>
-        <a
-          href="https://connpass.com/event/242713/"
-          class="text-blue-500 hover:underline decoration-dashed"
-          target="_blank"
-          rel="noopener noreferrer">traP LT 登壇</a
-        >
-      </p>
-
-      <p class="text-right">2021/8</p>
-      <p>Web Speed Hackathon 2021</p>
-
-      <p class="text-right">2021/4 ~</p>
-      <div>
-        <p>東京工業大学 物理学系</p>
-        <p>デジタル創作同好会 traP</p>
-      </div>
-
-      <p class="text-right">高校時代</p>
-      <p>
-        SecHack365というハッカソンに偶然採択されて周りに憧れて低レイヤー人間になる。
-      </p>
-
-      <p class="text-right">中学時代</p>
-      <p>宇宙への興味から物理や数学にハマる</p>
-
-      <p class="text-right">2002/10</p>
-      <div>
-        <p>産声を上げる</p>
-        <p>将来の夢は宇宙飛行士</p>
-      </div>
-    </div>
-
-    <h2 class="text-4xl mt-32 mb-8 pb-4 border-b font-[Montserrat] font-bold">
-      ARTICLES
-    </h2>
-    <ul
-      role="list"
-      class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 p-0"
-    >
-      {
-        articles.map((article) => (
-          <a href={article.url} target="_blank" rel="noopener noreferrer">
-            <WorkCard
-              title={article.title}
-              source={article.source}
-              postedAt={article.postedAt}
-              image={article.ogImageUrl}
-            />
+      <h2 class="text-4xl mt-32 mb-8 pb-4 border-b font-[Montserrat] font-bold">
+        LOG
+      </h2>
+      <div class="ml-4 grid grid-cols-[150px_1fr] gap-x-4 gap-y-2">
+        <p class="text-right">2024/7</p>
+        <p>
+          <a
+            href="https://trap.jp/post/2249/"
+            class="text-blue-500 hover:underline decoration-dashed"
+          >
+            技術書展16 traP TechBook 執筆
           </a>
-        ))
-      }
-    </ul>
-  </div>
+        </p>
+
+        <p class="text-right">2024/2 ~</p>
+        <div>
+          <p>株式会社ナンバーナイン (インターン)</p>
+          <p>フロントエンドエンジニアをしています。</p>
+        </div>
+
+        <p class="text-right">2024/2 ~ 2024/3</p>
+        <div>
+          <p>株式会社 Ricerca Security (業務委託)</p>
+          <p>リサーチャーをしていました。</p>
+        </div>
+
+        <p class="text-right">2023/10</p>
+        <p>SECCON CTF 2023 Domestic 6th</p>
+
+        <p class="text-right">2023/8</p>
+        <p>
+          セキュリティ・キャンプ全国大会 暗号フルスタック開発ゼミ チューター
+        </p>
+
+        <p class="text-right">2023/8</p>
+        <p>ISUCON 13 freee 賞</p>
+
+        <p class="text-right">2023/2</p>
+        <p>みやぎハッカソン</p>
+
+        <p class="text-right">2022/10</p>
+        <p>
+          <a
+            href="https://trap.jp/post/1769/"
+            class="text-blue-500 hover:underline decoration-dashed"
+            target="_blank"
+            rel="noopener noreferrer">SECCON CTF 2022 Domestic 7th</a
+          >
+        </p>
+
+        <p class="text-right">2022/9</p>
+        <p>
+          <a
+            href="https://trap.jp/post/1676/"
+            class="text-blue-500 hover:underline decoration-dashed"
+          >
+            技術書展13 traP SysAd TechBook 4 執筆
+          </a>
+        </p>
+
+        <p class="text-right">2022/8</p>
+        <div>
+          <p>セキュリティ・キャンプ全国大会 脅威解析クラス</p>
+        </div>
+
+        <p class="text-right">2022/8</p>
+        <div>
+          <p>株式会社 FFRI セキュリティ (インターン)</p>
+          <p>短期インターンに参加させていただきました。</p>
+        </div>
+
+        <p class="text-right">2022/3</p>
+        <p>
+          <a
+            href="https://connpass.com/event/242713/"
+            class="text-blue-500 hover:underline decoration-dashed"
+            target="_blank"
+            rel="noopener noreferrer">traP LT 登壇</a
+          >
+        </p>
+
+        <p class="text-right">2021/8</p>
+        <p>Web Speed Hackathon 2021</p>
+
+        <p class="text-right">2021/4 ~</p>
+        <div>
+          <p>東京工業大学 物理学系</p>
+          <p>デジタル創作同好会 traP</p>
+        </div>
+
+        <p class="text-right">高校時代</p>
+        <p>
+          SecHack365というハッカソンに偶然採択されて周りに憧れて低レイヤー人間になる。
+        </p>
+
+        <p class="text-right">中学時代</p>
+        <p>宇宙への興味から物理や数学にハマる</p>
+
+        <p class="text-right">2002/10</p>
+        <div>
+          <p>産声を上げる</p>
+          <p>将来の夢は宇宙飛行士</p>
+        </div>
+      </div>
+
+      <h2 class="text-4xl mt-32 mb-8 pb-4 border-b font-[Montserrat] font-bold">
+        ARTICLES
+      </h2>
+      <ul
+        role="list"
+        class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 p-0"
+      >
+        {
+          articles.map((article) => (
+            <a href={article.url} target="_blank" rel="noopener noreferrer">
+              <WorkCard
+                title={article.title}
+                source={article.source}
+                postedAt={article.postedAt}
+                image={article.ogImageUrl}
+              />
+            </a>
+          ))
+        }
+      </ul>
+    </div>
+  </main>
 </Layout>
