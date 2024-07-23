@@ -1,5 +1,5 @@
 ---
-import { Image, Picture } from "astro:assets";
+import { Image } from "astro:assets";
 import top from "@/assets/1500x500.jpg";
 import userIcon from "@/assets/iconx16.avif";
 import { getArticles } from "@/libs/article";
@@ -17,9 +17,11 @@ const articles = await getArticles();
   <main class="bg-[linear-gradient(to_bottom,_#d5ebfb_0%,_#86c6e0_100%)]">
     <!-- Top -->
     <div class="relative w-full transition">
-      <Picture
+      <Image
         src={top}
-        formats={["avif", "webp"]}
+        format="avif"
+        widths={[240, 540, 720, top.width]}
+        sizes="auto"
         alt="top image"
         class="transition-all w-full object-cover h-[25dvh]"
         decoding="async"
